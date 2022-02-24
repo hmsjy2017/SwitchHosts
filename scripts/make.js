@@ -15,7 +15,7 @@ const path = require('path')
 const root_dir = path.normalize(path.join(__dirname, '..'))
 const dist_dir = path.normalize(path.join(__dirname, '..', 'dist'))
 
-const electronLanguages = ['en', 'fr', 'zh_CN']
+const electronLanguages = ['en', 'fr', 'zh_CN', 'de']
 
 const TARGET_PLATFORMS_configs = {
   mac: {
@@ -31,7 +31,7 @@ const TARGET_PLATFORMS_configs = {
     linux: ['AppImage:arm64', 'deb:arm64', 'AppImage:armv7l', 'deb:armv7l'],
   },
   all: {
-    mac: ['dmg:x64', 'dmg:arm64'],
+    mac: ['dmg:x64', 'dmg:arm64', 'dmg:universal'],
     linux: ['AppImage:x64', 'deb:x64'],
     win: ['nsis:ia32', 'nsis:x64', 'portable:ia32'],
   },
